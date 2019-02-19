@@ -2,12 +2,27 @@
 
 A working demo of the genome browser can be found [here](https://chfi.github.io/genetics-browser-example/track/).
 
-You need npm 5, as well as the Purescript compiler and build tools. The latter
-can be installed with npm:
+You need [npm v5+](https://www.npmjs.com/), as well as the
+[Purescript](http://www.purescript.org/) compiler and build tools. The
+latter can be installed with npm:
 
 ```shell
+npm --version
 npm install -g purescript@"== 0.12.0" pulp psc-package
+```
 
+If you want to build in your HOME directory do something like this first
+
+```shell
+export NPM_PACKAGES="$HOME/.npm-packages"
+echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
+```
+
+Add the path
+
+```shell
+export PATH=$NPM_PACKAGES/bin/:$PATH
+purs --version
 ```
 
 The browser can then be built using make, into the example folder at `./dist/app.js`:
