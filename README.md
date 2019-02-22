@@ -9,6 +9,7 @@ latter can be installed with npm:
 ```shell
 npm --version
 npm install -g purescript@"== 0.12.0" pulp psc-package
+npm update
 ```
 
 If you want to build in your HOME directory do something like this first
@@ -21,7 +22,7 @@ echo "prefix = $NPM_PACKAGES" >> ~/.npmrc
 Add the path
 
 ```shell
-export PATH=$NPM_PACKAGES/bin/:$PATH
+export PATH=$NPM_PACKAGES/bin:$PATH
 purs --version
 ```
 
@@ -35,7 +36,6 @@ That produces `./dist/app.js`. Opening `./dist/index.html`
 should now display the genome browser.
 
 The output path can be changed with the OUT option:
-
 
 ``` shell
 make OUT=otherdist/index.js build
